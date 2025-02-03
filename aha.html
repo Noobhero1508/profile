@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giới thiệu bản thân</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #ffffff;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .profile {
+      margin: 30px auto;
+      text-align: center;
+    }
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .intro {
+      background-color: #1a1a1a;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
+      font-size: 24px;
+      min-height: 60px;
+    }
+
+    .socials {
+      max-width: 700px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .social-item {
+      background-color: #1a1a1a;
+      padding: 15px 20px;
+      width: calc(50% - 20px);
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .social-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(155, 89, 182, 0.7), 0 0 30px rgba(41, 128, 185, 0.7);
+    }
+    .social-item img {
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+    }
+    .social-item span {
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile">
+    <img src="https://scontent.fsgn13-1.fna.fbcdn.net/v/t39.30808-6/453377645_457283600595540_4192013380649932653_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEBKtiR5C7gpvqUAc3yW5qCIZ7mD9g9RrQhnuYP2D1GtA7fiQ-jyOOd7yU7Pk9PtI86BhfPAZY-Di4I9j5P0TTR&_nc_ohc=5EcRR1BS4_kQ7kNvgFXNGEE&_nc_oc=AdjdQIKqs2gHROj4spQ_fSFbX-jjO34uBljjDC9Ex6naERi_ybWjeeMxkfK6CQO16jQ&_nc_zt=23&_nc_ht=scontent.fsgn13-1.fna&_nc_gid=Au43mVs5ffiezY5WGYfZG0a&oh=00_AYATgb7zuPgiYCmdopCUJzA9Ir4fxhw26sMi8HRU_x27JQ&oe=67A6AE33" alt="Ảnh đại diện">
+  </div>
+
+  <div class="intro">
+    <span id="typewriter"></span>
+  </div>
+
+  <div class="socials">
+    <div class="social-item" onclick="window.open('https://www.facebook.com/chihuu.nguyen.31105', '_blank')">
+      <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-facebook-3d-logo-download-in-png-blend-fbx-gltf-file-formats--fb-company-social-media-pack-logos-4170554.png?f=webp" alt="Facebook">
+      <span>Facebook</span>
+    </div>
+    <div class="social-item" onclick="window.open('https://www.tiktok.com/@toisedouit', '_blank')">
+      <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-tiktok-3d-logo-download-in-png-blend-fbx-gltf-file-formats--tik-tok-social-media-pack-logos-4206729.png?f=webp" alt="TikTok">
+      <span>TikTok</span>
+    </div>
+    <div class="social-item" onclick="window.open('https://www.instagram.com/chihuu.nguyen.31105/', '_blank')">
+      <img src="https://ouch-cdn2.icons8.com/_US60I188UuoRurpJ9lfFmfp5baT-Gtp3bghSn-AOL8/rs:fit:456:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTI0/L2NjYjgwMjlkLWZh/NWMtNDU5Yy05YjBk/LWI0Yzg2MzI3Zjc0/Mi5wbmc.png" alt="Instagram">
+      <span>Instagram</span>
+    </div>
+    <div class="social-item" onclick="window.open('https://www.youtube.com/@Noobcaychay', '_blank')">
+      <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-youtube-3d-logo-download-in-png-blend-fbx-gltf-file-formats--you-tube-video-streaming-social-media-pack-logos-2447893.png" alt="YouTube">
+      <span>YouTube</span>
+    </div>
+    <div class="social-item" onclick="window.open('https://github.com/Noobhero1508', '_blank')">
+      <img src="https://images.seeklogo.com/logo-png/50/2/github-icon-logo-png_seeklogo-503247.png" alt="GitHub">
+      <span>GitHub</span>
+    </div>
+    <div class="social-item" onclick="window.open('https://www.threads.net/@chihuu.nguyen.31105', '_blank')">
+      <img src="https://static.vecteezy.com/system/resources/previews/042/165/797/non_2x/threads-3d-icon-black-background-free-png.png" alt="Threads">
+      <span>Threads</span>
+    </div>
+  </div>
+
+  <script>
+    const text = "Xin chào các bạn!!";
+    let index = 0;
+    const speed = 150;
+
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
