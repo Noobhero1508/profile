@@ -3,129 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Giới thiệu đôi chút</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #0d0d0d;
-      color: #ffffff;
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
-
-    .profile {
-      margin: 30px auto;
-      text-align: center;
-    }
-    .profile img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #fff;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    }
-
-    .intro {
-      background-color: #1a1a1a;
-      max-width: 700px;
-      margin: 20px auto;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
-      font-size: 24px;
-      min-height: 60px;
-    }
-
-    .socials {
-      max-width: 700px;
-      margin: 20px auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .social-item {
-      background-color: #1a1a1a;
-      padding: 15px 20px;
-      width: calc(50% - 20px);
-      display: flex;
-      align-items: center;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .social-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(155, 89, 182, 0.7), 0 0 30px rgba(41, 128, 185, 0.7);
-    }
-    .social-item img {
-      width: 40px;
-      height: 40px;
-      margin-right: 15px;
-    }
-    .social-item span {
-      font-size: 22px;
-    }
-  </style>
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Không gian cá nhân của Chí Hữu, nơi lưu lại những điều mình đang học, đang làm và muốn chia sẻ.">
+  <title>Chí Hữu - Personal space</title>
+  <link rel="preload" href="475770244_593392350317997_3401258420794525184_n.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="profile">
-    <img src="475770244_593392350317997_3401258420794525184_n.jpg" alt="Ảnh đại diện">
-  </div>
+  <a class="skip-link" href="#main-content">Đi tới nội dung chính</a>
 
-  <div class="intro">
-    <span id="typewriter"></span>
-  </div>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-  <div class="socials">
-    <div class="social-item" onclick="window.open('https://www.facebook.com/nguyen.chi.huu.701897', '_blank')">
-      <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-facebook-3d-logo-download-in-png-blend-fbx-gltf-file-formats--fb-company-social-media-pack-logos-4170554.png?f=webp" alt="Facebook">
-      <span>Facebook</span>
-    </div>
-    <div class="social-item" onclick="window.open('https://www.tiktok.com/@toisedouit', '_blank')">
-      <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-tiktok-3d-logo-download-in-png-blend-fbx-gltf-file-formats--tik-tok-social-media-pack-logos-4206729.png?f=webp" alt="TikTok">
-      <span>TikTok</span>
-    </div>
-    <div class="social-item" onclick="window.open('https://www.instagram.com/chihuu.nguyen.31105/', '_blank')">
-      <img src="https://ouch-cdn2.icons8.com/_US60I188UuoRurpJ9lfFmfp5baT-Gtp3bghSn-AOL8/rs:fit:456:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTI0/L2NjYjgwMjlkLWZh/NWMtNDU5Yy05YjBk/LWI0Yzg2MzI3Zjc0/Mi5wbmc.png" alt="Instagram">
-      <span>Instagram</span>
-    </div>
-    <div class="social-item" onclick="window.open('https://www.youtube.com/@Noobcaychay', '_blank')">
-      <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-youtube-3d-logo-download-in-png-blend-fbx-gltf-file-formats--you-tube-video-streaming-social-media-pack-logos-2447893.png" alt="YouTube">
-      <span>YouTube</span>
-    </div>
-    <div class="social-item" onclick="window.open('https://github.com/Noobhero1508', '_blank')">
-      <img src="https://images.seeklogo.com/logo-png/50/2/github-icon-logo-png_seeklogo-503247.png" alt="GitHub">
-      <span>GitHub</span>
-    </div>
-    <div class="social-item" onclick="window.open('https://www.threads.net/@chihuu.nguyen.31105', '_blank')">
-      <img src="https://static.vecteezy.com/system/resources/previews/042/165/797/non_2x/threads-3d-icon-black-background-free-png.png" alt="Threads">
-      <span>Threads</span>
-    </div>
-  </div>
+  <header class="site-header" data-reveal="nav">
+    <a class="brand magnetic" href="#home" aria-label="Về đầu trang">
+      <span class="brand-mark">NH</span>
+      <span class="brand-copy">Noobhero<em>1508</em></span>
+    </a>
+    <nav aria-label="Điều hướng chính">
+      <a href="#about">Giới thiệu</a>
+      <a href="#connect">Kết nối</a>
+    </nav>
+    <a class="header-cta magnetic" href="https://github.com/Noobhero1508" target="_blank" rel="noopener noreferrer">
+      GitHub
+      <span aria-hidden="true">↗</span>
+    </a>
+  </header>
 
-  <script>
-    const text = "Xin chào !!! Nói chung trang này lập ra cho vui nếu bạn đã xem nó bạn hãy góp ý cho tôi những thứ tôi cần cải thiện để nó ổn hơn";
-    let index = 0;
-    const speed = 55;
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow hero-animate">
+          <span class="status-dot" aria-hidden="true"></span>
+          Xin chào, mình là Chí Hữu
+        </p>
+        <h1 id="hero-title" class="hero-title" aria-label="Học hỏi. Sáng tạo. Chia sẻ.">
+          <span class="title-line"><span>Học hỏi.</span></span>
+          <span class="title-line accent-line"><span>Sáng tạo.</span></span>
+          <span class="title-line"><span>Chia sẻ.</span></span>
+        </h1>
+        <p class="hero-lead hero-animate">
+          Một góc nhỏ trên internet để mình thử nghiệm ý tưởng, khám phá công nghệ
+          và kết nối với những người có cùng sự tò mò.
+        </p>
+        <div class="hero-actions hero-animate">
+          <a class="button button-primary magnetic" href="#connect">
+            Kết nối với mình <span aria-hidden="true">↓</span>
+          </a>
+          <a class="button button-ghost magnetic" href="https://github.com/Noobhero1508?tab=repositories" target="_blank" rel="noopener noreferrer">
+            Xem dự án <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="hero-note hero-animate" aria-label="Thông tin nhanh">
+          <span>Based in Vietnam</span>
+          <span class="note-separator" aria-hidden="true"></span>
+          <span>Learning in public</span>
+        </div>
+      </div>
 
-    function typeWriter() {
-      if (index < text.length) {
-        document.getElementById("typewriter").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, speed);
-      }
-    }
+      <div class="hero-visual" aria-label="Ảnh chân dung Chí Hữu">
+        <div class="portrait-orbit orbit-one" aria-hidden="true"></div>
+        <div class="portrait-orbit orbit-two" aria-hidden="true"></div>
+        <div class="portrait-frame">
+          <div class="portrait-inner">
+            <img src="475770244_593392350317997_3401258420794525184_n.jpg" alt="Chí Hữu ngồi trên ghế trong một căn phòng" width="1280" height="1280">
+          </div>
+          <span class="portrait-index" aria-hidden="true">01 / 03</span>
+          <span class="portrait-caption">curious mind<br>digital explorer</span>
+        </div>
+        <div class="floating-chip chip-top" aria-hidden="true">
+          <span>✦</span> keep exploring
+        </div>
+        <div class="floating-chip chip-bottom" aria-hidden="true">
+          <span class="pulse"></span> online
+        </div>
+      </div>
 
-    window.onload = typeWriter;
-  </script>
+      <a class="scroll-cue" href="#about" aria-label="Cuộn xuống phần giới thiệu">
+        <span>Scroll to explore</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <section class="about section-shell" id="about" aria-labelledby="about-title">
+      <div class="section-heading reveal-item">
+        <p class="section-number">01 - About</p>
+        <h2 id="about-title">Không cần biết hết.<br><span>Chỉ cần không ngừng học.</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-card glass-card reveal-item" data-tilt>
+          <p class="card-kicker">Về mình</p>
+          <p class="about-statement">
+            Mình tạo trang này để lưu lại hành trình học hỏi, thử những điều mới
+            và chia sẻ một chút năng lượng tích cực. Mọi thứ vẫn đang được hoàn thiện,
+            giống như chính mình vậy.
+          </p>
+          <div class="card-footer">
+            <span>Always a work in progress</span>
+            <span aria-hidden="true">↗</span>
+          </div>
+        </article>
+
+        <div class="mini-card glass-card reveal-item" data-tilt>
+          <span class="mini-icon" aria-hidden="true">⌁</span>
+          <div>
+            <p>Đang quan tâm</p>
+            <strong>Web · Creative coding · AI</strong>
+          </div>
+        </div>
+
+        <div class="mini-card glass-card reveal-item" data-tilt>
+          <span class="mini-icon" aria-hidden="true">◎</span>
+          <div>
+            <p>Phương châm</p>
+            <strong>Học bằng cách tạo ra</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="connect section-shell" id="connect" aria-labelledby="connect-title">
+      <div class="section-heading connect-heading reveal-item">
+        <div>
+          <p class="section-number">02 - Connect</p>
+          <h2 id="connect-title">Tìm mình<br><span>trên internet.</span></h2>
+        </div>
+        <p>Chọn một nền tảng và ghé qua nói lời chào. Mình luôn vui khi được kết nối.</p>
+      </div>
+
+      <div class="social-grid" role="list">
+        <a class="social-card reveal-item" role="listitem" href="https://www.facebook.com/nguyen.chi.huu.701897" target="_blank" rel="noopener noreferrer" data-accent="#6c8cff" data-tilt>
+          <span class="social-number">01</span>
+          <span class="social-icon" aria-hidden="true">f</span>
+          <span class="social-copy"><strong>Facebook</strong><small>@nguyen.chi.huu</small></span>
+          <span class="social-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="social-card reveal-item" role="listitem" href="https://www.tiktok.com/@toisedouit" target="_blank" rel="noopener noreferrer" data-accent="#73fbd3" data-tilt>
+          <span class="social-number">02</span>
+          <span class="social-icon" aria-hidden="true">♪</span>
+          <span class="social-copy"><strong>TikTok</strong><small>@toisedouit</small></span>
+          <span class="social-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="social-card reveal-item" role="listitem" href="https://www.instagram.com/chihuu.nguyen.31105/" target="_blank" rel="noopener noreferrer" data-accent="#ff77ba" data-tilt>
+          <span class="social-number">03</span>
+          <span class="social-icon" aria-hidden="true">◎</span>
+          <span class="social-copy"><strong>Instagram</strong><small>@chihuu.nguyen.31105</small></span>
+          <span class="social-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="social-card reveal-item" role="listitem" href="https://www.youtube.com/@Noobcaychay" target="_blank" rel="noopener noreferrer" data-accent="#ff6868" data-tilt>
+          <span class="social-number">04</span>
+          <span class="social-icon icon-wide" aria-hidden="true">▶</span>
+          <span class="social-copy"><strong>YouTube</strong><small>@Noobcaychay</small></span>
+          <span class="social-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="social-card reveal-item" role="listitem" href="https://github.com/Noobhero1508" target="_blank" rel="noopener noreferrer" data-accent="#c8c9d2" data-tilt>
+          <span class="social-number">05</span>
+          <span class="social-icon icon-code" aria-hidden="true">⌘</span>
+          <span class="social-copy"><strong>GitHub</strong><small>@Noobhero1508</small></span>
+          <span class="social-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="social-card reveal-item" role="listitem" href="https://www.threads.net/@chihuu.nguyen.31105" target="_blank" rel="noopener noreferrer" data-accent="#f0f0f2" data-tilt>
+          <span class="social-number">06</span>
+          <span class="social-icon" aria-hidden="true">@</span>
+          <span class="social-copy"><strong>Threads</strong><small>@chihuu.nguyen.31105</small></span>
+          <span class="social-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="closing section-shell" aria-label="Lời kết">
+      <div class="closing-line" aria-hidden="true"></div>
+      <p class="closing-kicker reveal-item">Cảm ơn bạn đã ghé qua</p>
+      <h2 class="reveal-item">Cùng tạo nên<br><span>điều thú vị nhé.</span></h2>
+      <a class="button button-primary magnetic reveal-item" href="https://github.com/Noobhero1508" target="_blank" rel="noopener noreferrer">
+        Khám phá GitHub <span aria-hidden="true">↗</span>
+      </a>
+      <div class="closing-shape" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <a class="brand" href="#home">
+      <span class="brand-mark">NH</span>
+      <span class="brand-copy">Noobhero<em>1508</em></span>
+    </a>
+    <p>Designed with curiosity · Animated with GSAP</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
